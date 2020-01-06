@@ -401,6 +401,12 @@ void specialKeyPress(int key, int x, int y)
   case GLUT_KEY_DOWN:      decreaseMaxFrameRate(&app.frameRateController, 10); break;
   case GLUT_KEY_PAGE_UP:   increaseMinFrameRate(&app.frameRateController, 10); break;
   case GLUT_KEY_PAGE_DOWN: decreaseMinFrameRate(&app.frameRateController, 10); break;
+		  
+  case GLUT_KEY_RIGHT:     increaseMaxFrameRate(&app.frameRateController, 1); break;
+  case GLUT_KEY_LEFT:      decreaseMaxFrameRate(&app.frameRateController, 1); break;
+  case GLUT_KEY_HOME:      increaseMinFrameRate(&app.frameRateController, 1); break;
+  case GLUT_KEY_END:       decreaseMinFrameRate(&app.frameRateController, 1); break;
+		  
   }
 }
 
